@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+  <labels>
+    <fullName>Trigger_ContextException</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>Trigger_ContextException</shortDescription>
+    <value>This class may only run within a Trigger-based execution context</value>
+  </labels>
+  <labels>
+    <fullName>Trigger_Disabled</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>Trigger_Disabled</shortDescription>
+    <value>{0} trigger is disabled</value>
+  </labels>
+  <labels>
+    <fullName>Trigger_EventDisabled</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>Trigger_EventDisabled</shortDescription>
+    <value>{0} {1} is disabled</value>
+  </labels>
+  <labels>
+    <fullName>Trigger_Info</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>Trigger_Info</shortDescription>
+    <value>{0} :: {1} :: {2}</value>
+  </labels>
+  <labels>
+    <fullName>Trigger_ParameterException</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>Trigger_ParameterException</shortDescription>
+    <value>Trigger.new and Trigger.old were both null. Make sure you call this inside a trigger.</value>
+  </labels>
+  <labels>
+    <fullName>Trigger_SettingException</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>Trigger_SettingException</shortDescription>
+    <value>There is no Trigger_Setting__mdt created for this sObject: {0}</value>
+  </labels>
+</CustomLabels>
