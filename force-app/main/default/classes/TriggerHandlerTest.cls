@@ -1,8 +1,6 @@
 @IsTest
 public class TriggerHandlerTest {
 
-  // TODO: decouple this from all the factories...!!!>>>
-
 	@TestSetup
 	static void testSetup() {
 		Account acc = new Account();
@@ -87,15 +85,14 @@ public class TriggerHandlerTest {
 	static void testUowError() {
 		Test.startTest();
 		try {
-			new LeadFactory()
-				.put(Lead.LastName, '')
-				.buildAndInsert();
+			Account acc = new Account();
+      acc.Name = null;
 			System.assert(false, 'Expected an exception');
 		} catch (Exception e) {
 			System.assert(true, 'Exception caught');
 		}
 		Test.stopTest();
-		System.assertEquals(0, [SELECT Count() FROM Lead], 'Leads should not have been inserted into the database');
+		System.assertEquals(0, [SELECT Count() FROM Account], 'Accounts should not have been inserted into the database');
 	}
 
 }

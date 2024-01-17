@@ -1,7 +1,7 @@
 /**
  * Created on Oct 13 2020
  *
- * Copyright (c) 2020 Matt T. Jants
+ * Copyright (c) 2020 MJ12358
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, 
@@ -166,37 +166,37 @@ public virtual without sharing class TriggerHandler {
 	//* Handler methods
 	// The after handlers were done to allow for possible expansion in the future
 
-	private void handleBeforeInsert(List<SObject> newItems) {
-		ValidateInsert(newItems);
-		ApplyDefaults(newItems);
-		BeforeInsert(newItems);
+	private void handleBeforeInsert(List<SObject> newList) {
+		ValidateInsert(newList);
+		ApplyDefaults(newList);
+		BeforeInsert(newList);
 	}
 
-	private void handleBeforeUpdate(Map<Id, SObject> newItems, Map<Id, SObject> oldItems) {
-		ValidateUpdate(newItems, oldItems);
-		ApplyDefaults(newItems, oldItems);
-		BeforeUpdate(newItems, oldItems);
+	private void handleBeforeUpdate(Map<Id, SObject> newMap, Map<Id, SObject> oldMap) {
+		ValidateUpdate(newMap, oldMap);
+		ApplyDefaults(newMap, oldMap);
+		BeforeUpdate(newMap, oldMap);
 	}
 
-	private void handleBeforeDelete(Map<Id, SObject> oldItems) {
-		ValidateDelete(oldItems);
-		BeforeDelete(oldItems);
+	private void handleBeforeDelete(Map<Id, SObject> oldMap) {
+		ValidateDelete(oldMap);
+		BeforeDelete(oldMap);
 	}
 
-	private void handleAfterInsert(Map<Id, SObject> newItems) {
-		AfterInsert(newItems);
+	private void handleAfterInsert(Map<Id, SObject> newMap) {
+		AfterInsert(newMap);
 	}
 
-	private void handleAfterUpdate(Map<Id, SObject> newItems, Map<Id, SObject> oldItems) {
-		AfterUpdate(newItems, oldItems);
+	private void handleAfterUpdate(Map<Id, SObject> newMap, Map<Id, SObject> oldMap) {
+		AfterUpdate(newMap, oldMap);
 	}
 
-	private void handleAfterDelete(Map<Id, SObject> oldItems) {
-		AfterDelete(oldItems);
+	private void handleAfterDelete(Map<Id, SObject> oldMap) {
+		AfterDelete(oldMap);
 	}
 
-	private void handleAfterUndelete(Map<Id, SObject> oldItems) {
-		AfterUndelete(oldItems);
+	private void handleAfterUndelete(Map<Id, SObject> oldMap) {
+		AfterUndelete(oldMap);
 	}
 
 	//* Overridable methods
@@ -205,29 +205,29 @@ public virtual without sharing class TriggerHandler {
 		return false;
 	}
 
-	protected virtual void ApplyDefaults(List<SObject> newItems) {} // on insert
+	protected virtual void ApplyDefaults(List<SObject> newList) {} // on insert
 
-	protected virtual void ApplyDefaults(Map<Id, SObject> newItems, Map<Id, SObject> oldItems) {} // on update
+	protected virtual void ApplyDefaults(Map<Id, SObject> newMap, Map<Id, SObject> oldMap) {} // on update
 
-	protected virtual void BeforeInsert(List<SObject> newItems) {}
+	protected virtual void BeforeInsert(List<SObject> newList) {}
 
-	protected virtual void BeforeUpdate(Map<Id, SObject> newItems, Map<Id, SObject> oldItems) {}
+	protected virtual void BeforeUpdate(Map<Id, SObject> newMap, Map<Id, SObject> oldMap) {}
 
-	protected virtual void BeforeDelete(Map<Id, SObject> oldItems) {}
+	protected virtual void BeforeDelete(Map<Id, SObject> oldMap) {}
 
-	protected virtual void AfterInsert(Map<Id, SObject> newItems) {}
+	protected virtual void AfterInsert(Map<Id, SObject> newMap) {}
 
-	protected virtual void AfterUpdate(Map<Id, SObject> newItems, Map<Id, SObject> oldItems) {}
+	protected virtual void AfterUpdate(Map<Id, SObject> newMap, Map<Id, SObject> oldMap) {}
 
-	protected virtual void AfterDelete(Map<Id, SObject> oldItems) {}
+	protected virtual void AfterDelete(Map<Id, SObject> oldMap) {}
 
-	protected virtual void AfterUndelete(Map<Id, SObject> oldItems) {}
+	protected virtual void AfterUndelete(Map<Id, SObject> oldMap) {}
 
-	protected virtual void ValidateInsert(List<SObject> newItems) {} // ISNEW() in formula
+	protected virtual void ValidateInsert(List<SObject> newList) {} // ISNEW() in formula
 
-	protected virtual void ValidateUpdate(Map<Id, SObject> newItems, Map<Id, SObject> oldItems) {} // ISCHANGED() in formula
+	protected virtual void ValidateUpdate(Map<Id, SObject> newMap, Map<Id, SObject> oldMap) {} // ISCHANGED() in formula
 
-	protected virtual void ValidateDelete(Map<Id, SObject> oldItems) {}
+	protected virtual void ValidateDelete(Map<Id, SObject> oldMap) {}
 
 	//* Utility methods
 
