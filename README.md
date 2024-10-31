@@ -9,7 +9,6 @@
 
 ```apex
 public class AccountTrigger extends TriggerHandler {
-
   static Boolean isDisabled = false;
 
   public AccountTrigger() {
@@ -21,31 +20,40 @@ public class AccountTrigger extends TriggerHandler {
   }
 
   protected override BeforeInsert(List<SObject> newList) {
-
+    // Do work "Before Insert".
   }
 
-  protected override AfterInsert(Map<Id, SObject> newMap, Map<Id, SObject> oldMap) {
-
+  protected override AfterInsert(
+    Map<Id, SObject> newMap,
+    Map<Id, SObject> oldMap
+  ) {
+    // Do work "After Insert".
   }
 
-  protected override BeforeUpdate(Map<Id, SObject> newMap, Map<Id, SObject> oldMap) {
-
+  protected override BeforeUpdate(
+    Map<Id, SObject> newMap,
+    Map<Id, SObject> oldMap
+  ) {
+    // Do work "Before Update".
   }
 
-  protected override AfterUpdate(Map<Id, SObject> newMap, Map<Id, SObject> oldMap) {
-
+  protected override AfterUpdate(
+    Map<Id, SObject> newMap,
+    Map<Id, SObject> oldMap
+  ) {
+    // Do work "After Update".
   }
 
   protected override BeforeDelete(Map<Id, SObject> oldMap) {
-
+    // Do work "Before Delete".
   }
 
   protected override AfterDelete(Map<Id, SObject> oldMap) {
-
+    // Do work "After Delete".
   }
 
   protected override AfterUndelete(Map<Id, SObject> oldMap) {
-    
+    // Do work "After Undelete".
   }
 }
 ```

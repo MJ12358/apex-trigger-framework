@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
   <labels>
     <fullName>Trigger_ContextException</fullName>
     <language>en_US</language>
     <protected>false</protected>
     <shortDescription>Trigger_ContextException</shortDescription>
-    <value>This class may only run within a Trigger-based execution context</value>
+    <value
+    >This class may only run within a Trigger-based execution context</value>
   </labels>
   <labels>
     <fullName>Trigger_Disabled</fullName>
@@ -33,13 +34,15 @@
     <language>en_US</language>
     <protected>false</protected>
     <shortDescription>Trigger_ParameterException</shortDescription>
-    <value>Trigger.new and Trigger.old were both null. Make sure you call this inside a trigger.</value>
+    <value
+    >Trigger.new and Trigger.old were both null. Make sure you call this inside a trigger.</value>
   </labels>
   <labels>
     <fullName>Trigger_SettingException</fullName>
     <language>en_US</language>
     <protected>false</protected>
     <shortDescription>Trigger_SettingException</shortDescription>
-    <value>There is no Trigger_Setting__mdt created for this sObject: {0}</value>
+    <value
+    >There is no Trigger_Setting__mdt created for this sObject: {0}</value>
   </labels>
 </CustomLabels>
